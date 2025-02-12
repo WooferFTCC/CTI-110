@@ -1,7 +1,7 @@
 # Samuel Abling
 # 02/05/2025
 # P1HW1
-# Desc
+# Program for calculating user's remaining budget after travel expenses
 
 # Inform user of program's function
 
