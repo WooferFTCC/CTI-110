@@ -17,10 +17,8 @@ mon = int(100 * float(input('Enter the amount of money as a float: $')))
 # Dollars
 if mon != 0:
     dol = mon // 100
-    if dol == 1:
-        print(f'{dol} dollar')
-    elif dol != 0:
-        print(f'{dol} dollars')
+    if dol != 0:
+        print(f'{dol} dollar{"s" if dol > 1 else ""}')
 
     mon %= 100
 
@@ -28,10 +26,8 @@ if mon != 0:
     if mon != 0:
 
         qu = mon // 25
-        if qu == 1:
-            print(f'{qu} quarter')
-        elif qu != 0:
-            print(f'{qu} quarters')
+        if qu != 0:
+            print(f'{qu} quarter{"s" if qu > 1 else ""}')
 
         mon %= 25
 
@@ -39,10 +35,8 @@ if mon != 0:
         if mon != 0:
 
             di = mon // 10
-            if di == 1:
-                print(f'{di} dime')
-            elif di != 0:
-                print(f'{di} dimes')
+            if di != 0:
+                print(f'{di} dime{"s" if di > 1 else ""}')
 
             mon %= 10
 
@@ -50,10 +44,8 @@ if mon != 0:
             if mon != 0:
                 
                 ni = mon // 5
-                if ni == 1:
-                    print(f'{ni} nickel')
-                elif ni != 0:
-                    print(f'{ni} nickels')
+                if ni != 0:
+                    print(f'{ni} nickel{"s" if ni > 1 else ""}')
 
                 mon %= 5
 
@@ -61,10 +53,7 @@ if mon != 0:
                 if mon != 0:
 
                     pe = mon
-                    if pe == 1:
-                        print(f'{pe} penny')
-                    else:
-                        print(f'{pe} pennies')
+                    print(f'{pe} penn{"ies" if pe > 1 else "y"}')
 
 
 ## If 0 is input, print 'No change'
