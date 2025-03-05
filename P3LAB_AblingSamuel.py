@@ -4,10 +4,11 @@
 # Take an input of dollars and cents in the form of a float (EX: 1.23), then breaks that down into the most efficient change.
 
 
-## Input money as a float, move up two decimal places, convert to int
+## Input money as a float, move up two decimal places, convert to int, absolute value
 
 print('\n')
-mon = int(100 * float(input('Enter the amount of money as a float: $')))
+mon = int(
+    abs(100 * float(input('Enter the amount of money as a float: $'))))
 
 
 ## If mon == 0 after calculating previous coin type, the calculations are finished
@@ -62,3 +63,10 @@ else:
     print('No change')
 
 print('\n')
+
+
+
+
+
+
+# If only I was allowed to use functions :(
