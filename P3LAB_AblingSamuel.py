@@ -7,8 +7,7 @@
 ## Input money as a float, move up two decimal places, convert to int, absolute value
 
 print('\n')
-mon = int(
-    abs(100 * float(input('Enter the amount of money as a float: $'))))
+mon = int(abs(100 * float(input('Enter the amount of money as a float: $'))))
 
 
 ## If mon == 0 after calculating previous coin type, the calculations are finished
