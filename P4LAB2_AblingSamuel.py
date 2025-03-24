@@ -5,7 +5,8 @@
 
 
 # Program runs in loop until cont(inue) == no
-while True:
+fakeBreak = 0
+while fakeBreak == 0:
     
     # Loop checking userIn until the user inputs a positive integer as a string.
     userIn = ''
@@ -28,9 +29,16 @@ while True:
     for x in range(12):
         print(f'{num} * {x + 1} = {num * (x + 1)}')
 
-    # Ask to run program again with new input.
+    # Ask user if they want to run the program again.
     cont = input('\nWould you like to run the program again? (yes / no) ')
+    cont = cont.lower()
+
+    while cont != 'yes' and cont != 'no':
+        cont = input(
+            '\nINVALID INPUT'
+            '\nPlease enter only "yes" or "no"'
+            '\nWould you like to run the program again? (yes / no) '
+        )
     if cont == 'no':
         print('\n')
-        break
-
+        fakeBreak = 1
