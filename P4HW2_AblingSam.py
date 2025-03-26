@@ -78,14 +78,12 @@ while fakeBreak == 0:
         ## Table
         # Build row of headers
         headerRow = f'{'Hours Worked':<{columnWidth}}{'Pay Rate':<{columnWidth}}'
-        if overtime == 1:
-            headerRow += f'{'OverTime':<{columnWidth}}{'OverTime Pay':<{columnWidth}}{'RegHour Pay':<{columnWidth}}'
+        headerRow += f'{'OverTime':<{columnWidth}}{'OverTime Pay':<{columnWidth}}{'RegHour Pay':<{columnWidth}}'
         headerRow += f'{'Gross Pay':<{columnWidth}}'
 
         # Build row of content
         contentRow = f'{hoursInput:<{columnWidth}}{rateInput:<{columnWidth}}'
-        if overtime == 1:
-            contentRow += f'{OThours:<{columnWidth}}{OTpay:<{columnWidth}.2f}${pay:<{columnWidth}.2f}'
+        contentRow += f'{OThours:<{columnWidth}}{OTpay:<{columnWidth}.2f}${pay:<{columnWidth}.2f}'
         contentRow += f'${gross:<{columnWidth}.2f}'
 
         seperatorLen = len(headerRow) - 5
@@ -104,8 +102,7 @@ while fakeBreak == 0:
         )
     
     ## Program is terminated, display final results
-    # Displays if any of the employee's had overtime
-    elif anyOvertime:
+    else:
         print(
             '\n'
             f'\n{'Total number of employees entered':<40}{':':<5}{len(listEmployees)}'
@@ -114,12 +111,17 @@ while fakeBreak == 0:
             f'\n{'Total amount paid in gross':<40}{':':<5}${sum(listGross):.2f}'
             '\n'
             )
-    # Displays if none of the employees had overtime
-    else:
-        print(
-            '-------------------------------------'
-            '\n'
-            f'\n{'Total number of employees entered':<40}{':':<5}{len(listEmployees)}'
-            f'\n{'Total amount paid for hours':<40}{':':<5}${sum(listGross):.2f}'
-            '\n'
-        )
+        
+
+
+
+
+
+
+
+
+
+
+
+
+# >:(
