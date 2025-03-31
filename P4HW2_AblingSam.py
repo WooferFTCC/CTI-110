@@ -7,7 +7,7 @@
 
 ## Config
 columnWidth = 15
-# OTPay = 1.5
+# OTBonus = 1.5
 OTbonus = 1.5
 # overtimeLimit = 40
 overtimeLimit = 40
@@ -34,13 +34,18 @@ while fakeBreak == 0:
     if nameInput.lower() == 'done':
         fakeBreak = 1
 
-    # If program wasn't terminated, run program
+    # If user didn't want program terminated, run program
     if fakeBreak == 0:
+        # Reset local variables related to overtime
+        OThours = 0
+        OTrate = 0
+        OTpay = 0
+        overtime = 0
+
         # User inputs employee's hours then rate
         hoursInput = round(float(input(f'How many hours did {nameInput} work?: ')), 2)
         hours = hoursInput
         rateInput = round(float(input(f'What is {nameInput}\'s pay rate?: ')), 2)
-        overtime = 0
 
 
         ## If the employee worked overtime (> 40 hours), then Overtime hours = Input hours - 40; Overtime Pay = Overtime hours * (Payrate * OTPay); Hours -= Overtime Hours
